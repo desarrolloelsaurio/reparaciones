@@ -1,0 +1,45 @@
+
+Structure for table:                                 D:\DOCUMENTS\COPY\MYWORK\VISUALFOX\DISDEN\REPARACIONES\REPARA.DBF
+Number of data records:       0       
+Date of last update:          07/25/13
+Memo file block size:         64
+ Code Page:                   1252    
+                Field        Field Name                                                            Type                   Width            Dec    
+                    1        IDREPARA                                                              Integer (AutoInc)          4                   
+                    2        INGRESO                                                               Date                       8                   
+                    3        CODCLI                                                                Character                 10                   
+                    4        DESCRIPCIO                                                            Memo                       4                   
+                    5        IMPORTE                                                               Numeric                   10            2      
+                    6        ESTADO                                                                Character                  5                   
+** Total **                                  42
+
+Structure for table:                                 D:\DOCUMENTS\COPY\MYWORK\VISUALFOX\DISDEN\REPARACIONES\MOVIREPA.DBF
+Number of data records:       0       
+Date of last update:          07/25/13
+Memo file block size:         64
+ Code Page:                   1252    
+                Field        Field Name                                                            Type                   Width                   
+                    1        IDREPARA                                                              Integer                    4                   
+                    2        FECHA                                                                 Date                       8                   
+                    3        OBSERVA                                                               Memo                       4                   
+                    4        TIPOMOVI                                                              Character                  5                   
+** Total **                                  22
+
+Structure for table:                                D:\DOCUMENTS\COPY\MYWORK\VISUALFOX\DISDEN\REPARACIONES\TIPOMOVI.DBF
+Number of data records:       6       
+Date of last update:          07/25/13
+ Code Page:                   1252    
+                Field        Field Name                                                            Type                   Width                   
+                    1        CODTIPO                                                               Character                  5                   
+                    2        DESCRIPCIO                                                            Character                 50                   
+** Total **                                  56
+
+
+  CODTIPO                        DESCRIPCIO  
+-----------------------------------------------------------                                              
+  INGRE                          INGRESO TRABAJO                                           
+  PRESU                          PRESUPUESTADO                                             
+  ACEPT                          ACEPTA PRESUPUESTO                                        
+  OBSER                          OBSERVACION                                               
+  FINAL                          FINALIZADO                                                
+  ENTRE                          ENTREADO                                                  
