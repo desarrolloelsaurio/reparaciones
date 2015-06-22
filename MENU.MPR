@@ -1,6 +1,6 @@
 *       *********************************************************
 *       *                                                         
-*       * 06/17/15              MENU.MPR                14:24:06  
+*       * 22/06/15              MENU.MPR                12:30:54  
 *       *                                                         
 *       *********************************************************
 *       *                                                         
@@ -26,12 +26,12 @@
 SET SYSMENU TO
 SET SYSMENU AUTOMATIC
 
-DEFINE PAD _4dl0uv999 OF _MSYSMENU PROMPT "Operacion" COLOR SCHEME 3 ;
+DEFINE PAD _4dq0qtqbj OF _MSYSMENU PROMPT "Operacion" COLOR SCHEME 3 ;
 	KEY ALT+O, ""
-DEFINE PAD _4dl0uv99a OF _MSYSMENU PROMPT "Salir" COLOR SCHEME 3 ;
+DEFINE PAD _4dq0qtqbk OF _MSYSMENU PROMPT "Salir" COLOR SCHEME 3 ;
 	KEY ALT+S, ""
-ON PAD _4dl0uv999 OF _MSYSMENU ACTIVATE POPUP operacion
-ON SELECTION PAD _4dl0uv99a OF _MSYSMENU thisform.release
+ON PAD _4dq0qtqbj OF _MSYSMENU ACTIVATE POPUP operacion
+ON SELECTION PAD _4dq0qtqbk OF _MSYSMENU thisform.release
 
 DEFINE POPUP operacion MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF operacion PROMPT "Recepcion"

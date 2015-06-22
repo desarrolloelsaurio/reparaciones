@@ -1,10 +1,10 @@
-PROCEDURE inirepara
+PROCEDURE iniADMI
 SET SAFETY OFF 
 SET EXCLUSIVE OFF
 SET CENTURY OFF
 SET TALK ON 
 SET DATE BRITISH  
-SET DELETED ON
+SET DELETED ON 
 
 _Screen.WindowState = 2
 
@@ -15,8 +15,6 @@ IF !FILE(confname)
 	CANCEL
 ENDIF 
 Handler = FOPEN(confname)
-SET DELETED ON 
-
 lalin = FGETS(Handler)
 FCLOSE(Handler)
 
@@ -26,9 +24,15 @@ PUBLIC elcamino
 elcamino=SUBSTR(lalin,2)
 
 =opbase("personas")
-SELECT personas
-SET ORDER TO CODCLI   
-SELECT DISTINCT codcli, cliente FROM personas INTO TABLE curperso WHERE filtro = "C" AND !DELETED()
+*!*	SELECT personas
+*!*	SET ORDER TO CODCLI   && CODCLI
+*!*	SELECT DISTINCT codcli, cliente FROM personas INTO TABLE curperso WHERE filtro = "C" AND !DELETED()
 
 =opbase("mercarep")
-DO FORM principal
+=opbase("repara")
+=opbase("tipomovi")
+=opbase("movirepa")
+=opbase("merca")
+=opbase("mixta")
+
+DO FORM menuadm
