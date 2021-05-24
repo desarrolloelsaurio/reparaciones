@@ -1,4 +1,4 @@
-PROCEDURE inirepara
+PROCEDURE inireart
 SET SAFETY OFF 
 SET EXCLUSIVE OFF
 SET CENTURY OFF
@@ -30,5 +30,12 @@ SELECT personas
 SET ORDER TO CODCLI   
 SELECT DISTINCT codcli, cliente FROM personas INTO TABLE curperso WHERE filtro = "C" AND !DELETED()
 
-=opbase("merca")
-DO FORM principal
+=opbase("repara")
+
+=opbase("mercarep")
+PUBLIC qarticulo
+PUBLIC qcodart
+DO FORM buscaart
+IF !EMPTY(qcodart)
+	DO FORM lisrepar
+ENDIF 

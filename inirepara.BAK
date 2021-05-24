@@ -30,5 +30,5 @@ SELECT personas
 SET ORDER TO CODCLI   
 SELECT DISTINCT codcli, cliente FROM personas INTO TABLE curperso WHERE filtro = "C" AND !DELETED()
 
-=opbase("merca")
+=opbase("mercarep")
 DO FORM principal
