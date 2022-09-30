@@ -1,6 +1,6 @@
 *       *********************************************************
 *       *                                                         
-*       * 08/09/21              MENU.MPR                11:57:05  
+*       * 12/28/21              MENU.MPR                13:31:15  
 *       *                                                         
 *       *********************************************************
 *       *                                                         
@@ -26,12 +26,12 @@
 SET SYSMENU TO
 SET SYSMENU AUTOMATIC
 
-DEFINE PAD _6480pm6hb OF _MSYSMENU PROMPT "Operacion" COLOR SCHEME 3 ;
+DEFINE PAD _6850szaak OF _MSYSMENU PROMPT "Operacion" COLOR SCHEME 3 ;
 	KEY ALT+O, ""
-DEFINE PAD _6480pm6hc OF _MSYSMENU PROMPT "Salir" COLOR SCHEME 3 ;
+DEFINE PAD _6850szaal OF _MSYSMENU PROMPT "Salir" COLOR SCHEME 3 ;
 	KEY ALT+S, ""
-ON PAD _6480pm6hb OF _MSYSMENU ACTIVATE POPUP operacion
-ON SELECTION PAD _6480pm6hc OF _MSYSMENU thisform.release
+ON PAD _6850szaak OF _MSYSMENU ACTIVATE POPUP operacion
+ON SELECTION PAD _6850szaal OF _MSYSMENU thisform.release
 
 DEFINE POPUP operacion MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF operacion PROMPT "Recepcion"
