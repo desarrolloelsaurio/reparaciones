@@ -20,8 +20,9 @@ SET DELETED ON
 lalin = FGETS(Handler)
 FCLOSE(Handler)
 
-PUBLIC usuario_admin
+PUBLIC usuario_admin, BsAs
 usuario_admin = (LEFT(lalin,1) = "H")
+BsAs = (LEFT(lalin,1) = "G")
 PUBLIC elcamino
 elcamino=SUBSTR(lalin,2)
 
