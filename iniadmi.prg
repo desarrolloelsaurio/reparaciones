@@ -35,4 +35,34 @@ elcamino=SUBSTR(lalin,2)
 =opbase("merca")
 =opbase("mixta")
 
-DO FORM menuadm
+
+larepara = VAL(INPUTBOX("Numero de reparacion", "Impresion", "0"))
+IF EMPTY(larepara)
+	RETURN 
+ENDIF 
+
+m.elvende = eliven()
+
+m.laentrega = "En un lapso no mayor a 5 días hábiles nos comunicaremos para comunicar el presupuesto"
+m.lagarantia = "Garantia de los productos reparados: Todas las reparaciones tendrán una garantía de 30 días a partir de la fecha de entrega"
+
+SELECT REPARA
+=SEEK(LAREPARA, "REPARA", "IDREPARA") 	
+SCATTER MEMVAR MEMO 
+
+SELECT PERSONAS
+=SEEK(M.CODCLI, "PERSONAS", "CODCLI")
+SCATTER MEMVAR 
+STORE PERSONAS.TEXTO3 TO M.EMAIL
+
+SELECT MERCAREP
+=SEEK(M.ARTICULO, "MERCA", "ARTICULO")
+SCATTER MEMVAR MEMO 
+STORE MERCA.MERCA TO M.PRODUCTO
+
+SELECT MIXTA
+=SEEK(LOCALIDAD, "MIXTA", "CIUCOD")
+STORE MIXTA.TEXTO1 TO M.CIUDAD 
+		
+REPORT FORM recibo  RANGE 1,1  TO PRINTER PROMPT NOCONSOLE 
+
